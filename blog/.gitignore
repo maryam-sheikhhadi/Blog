@@ -9,7 +9,7 @@ venv
 env
 .env
 db.sqlite3
-
+text
 
 
 ### Django ###

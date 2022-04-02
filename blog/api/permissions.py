@@ -28,7 +28,6 @@ class IsAuthorOrReadOnly(BasePermission):
         return bool(
             request.user.is_authenticated and
             request.user.is_superuser or
-            # request.user.is_authenticated and #i don't need it
             obj.author == request.user
         )
 
