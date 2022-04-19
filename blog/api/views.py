@@ -3,9 +3,6 @@ from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIV
 from .models import Article
 from .permissions import IsStaffOrReadOnly, IsAuthorOrReadOnly, IsSuperuserOrStaffReadOnly
 from .serializers import ArticleSerializer, UserSerializer
-from rest_framework.views import APIView
-from rest_framework.response import Response
-from rest_framework.permissions import IsAuthenticated
 
 
 class ArticleList(ListCreateAPIView):
@@ -33,12 +30,3 @@ class UserDetail(RetrieveUpdateDestroyAPIView):
     queryset = User.objects.all()
     serializer_class = UserSerializer
     permission_classes = (IsSuperuserOrStaffReadOnly,)
-
-
-class RevokeToken(APIView):
-    permission_classes = (IsAuthenticated,)
-
-    def delete(self, request):
-        request.auth.delete()
-        # 204 no content
-        return Response(status=204)

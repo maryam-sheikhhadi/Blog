@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import ArticleList, ArticleDetail, UserList, UserDetail, RevokeToken
+from .views import ArticleList, ArticleDetail, UserList, UserDetail
 
 app_name = "api"
 

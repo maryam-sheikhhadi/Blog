@@ -1,4 +1,3 @@
-
 # Created by https://www.toptal.com/developers/gitignore/api/python,django,pycharm,virtualenv
 # Edit at https://www.toptal.com/developers/gitignore?templates=python,django,pycharm,virtualenv
 
@@ -10,6 +9,8 @@ env
 .env
 db.sqlite3
 text
+templates
+data.json
 
 
 ### Django ###
