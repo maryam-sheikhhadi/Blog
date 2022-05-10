@@ -1,1 +1,1 @@
-# blog
+drf mini project for practice
